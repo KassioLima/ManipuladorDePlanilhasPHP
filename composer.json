@@ -1,0 +1,16 @@
+{
+  "name": "v1/planilha",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Kassio",
+      "email": "kassio.lima.p@gmail.com"
+    }
+  ],
+  "require": {
+
+    "phpoffice/phpexcel": "dev-develop"
+  }
+}
