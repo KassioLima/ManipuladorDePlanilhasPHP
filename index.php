@@ -9,7 +9,8 @@
     $planilhas = array();
 
 //    $fileName = "Planejamento Financeiro.xlsx";
-    $fileName = "FÁBRICA CAIXINHA.xlsx";
+//    $fileName = "FÁBRICA CAIXINHA.xlsx";
+    $fileName = "JEF - CX - RF - EMP.xlsx";
 //    $fileName = "Pasta1.xlsx";
 
     /** detecta automaticamente o tipo de arruivo que será carregado */
@@ -52,7 +53,6 @@
         //cria um array com o nome da aba como índice
         $return[$sheetName] = $excelObj->getActiveSheet()->toArray(null, true,true,true);
     }
-    echo "<pre>";
     foreach ($return as $key => $value)
     {
         $sizePlanilha = sizeof($value);
@@ -93,11 +93,7 @@
         unset($linhasEColunas);
 
         $planilhas[$key] = array("coluna" => $nomeDasColunas, "linha" => $linhas);
-//        echo $key." - ";
-//        echo sizeof($planilhas)."<br>";
     }
-//    echo "<br><hr><br>";
-
 
 
 
@@ -106,7 +102,7 @@
     foreach ($planilhas as $key => $planilha)
     {
 ?>
-<h2><?php echo $key; ?></h2>]
+<h2><?php echo $key; ?></h2>
 <style>
     table tr td, table tr th
     {
